@@ -16,7 +16,7 @@ const PILLAR_ROWS = [
   {
     icon: "layers" as const,
     title: "WordPress, WooCommerce & Smart Inventory",
-    tag: "The flexible foundation",
+    tag: "The Flexible Foundation",
     body: "Custom WooCommerce stores that are visually stunning, easy to manage and optimized for conversions, with real-time stock tracking, low-stock alerts, automated updates, product variations and bulk import/export for growing catalogs.",
   },
   {
@@ -28,7 +28,7 @@ const PILLAR_ROWS = [
   {
     icon: "rocket" as const,
     title: "Checkout Flows: Carts People Finish",
-    tag: "Friction-free by design",
+    tag: "Friction-Free by Design",
     body: "Clean, distraction-free checkouts with progress indicators, guest checkout, auto-filled addresses, saved payment methods and one-click reorder. We eliminate the steps that cause abandonment, because we design carts people actually finish.",
   },
   {
@@ -97,22 +97,22 @@ const FAQS = [
 const WHY = [
   {
     icon: "rocket" as const,
-    title: "Revenue-generating platforms",
+    title: "Revenue-Generating Platforms",
     body: "We don't just build websites. We build platforms that drive sales and grow your business.",
   },
   {
     icon: "globe" as const,
-    title: "Current & capable",
+    title: "Current & Capable",
     body: "On top of e-commerce trends, payment technologies and conversion optimization strategies.",
   },
   {
     icon: "share" as const,
-    title: "Client-centric",
+    title: "Client-Centric",
     body: "First store or an upgrade, you get the same dedication and expertise on every project.",
   },
   {
     icon: "shield" as const,
-    title: "Quality, reliability, results",
+    title: "Quality, Reliability, Results",
     body: "10+ years of experience behind every store we launch.",
   },
 ];
@@ -131,7 +131,7 @@ export default function EcommercePage() {
           { text: "Sell with", cls: "text-paper" },
           { text: "Confidence", cls: "text-aqua" },
         ]}
-        tagline="Your online store should work as hard as you do."
+        tagline="Your Online Store Should Work as Hard as You Do."
         meta="WooCommerce · Payments · CRO"
         accent="aqua"
       />
@@ -141,12 +141,12 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="01"
-            kicker="Why e-commerce design matters"
+            kicker="Why E-Commerce Design Matters"
             title={
               <>
-                Your store is your
+                Your Store Is Your
                 <br />
-                <span className="text-aqua">digital storefront.</span>
+                <span className="text-aqua">Digital Storefront.</span>
               </>
             }
             note="It directly shapes how customers perceive your brand, and whether they buy."
@@ -180,12 +180,12 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="What makes a store sell"
+            kicker="What Makes a Store Sell"
             title={
               <>
                 Built to
                 <br />
-                <span className="text-aqua">convert.</span>
+                <span className="text-aqua">Convert.</span>
               </>
             }
           />
@@ -210,12 +210,12 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="03"
-            kicker="From catalog to checkout"
+            kicker="From Catalog to Checkout"
             title={
               <>
-                The build,
+                The Build,
                 <br />
-                <span className="text-aqua">end to end.</span>
+                <span className="text-aqua">End to End.</span>
               </>
             }
           />
@@ -228,28 +228,28 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="04"
-            kicker="Our work"
+            kicker="Our Work"
             title={
               <>
-                Success stories,
+                Success Stories,
                 <br />
-                <span className="text-aqua">on the way.</span>
+                <span className="text-aqua">on the Way.</span>
               </>
             }
             note="E-commerce case studies and screenshots are being added soon. Check back shortly."
           />
           <CaseStudy
             num="01"
-            client="Your store could be next"
+            client="Your Store Could Be Next"
             sector="E-Commerce · Coming soon"
             description="We're preparing a showcase of online stores we've designed and launched, complete with screenshots, conversion results and the strategy behind each build. Until then, this space is reserved for the numbers that matter."
             did={[
               {
-                lead: "Live store walkthroughs",
+                lead: "Live Store Walkthroughs",
                 body: "Screenshots and flows from real client stores, once published.",
               },
               {
-                lead: "Conversion results",
+                lead: "Conversion Results",
                 body: "The measurable impact of every build we ship.",
               },
             ]}
@@ -268,9 +268,9 @@ export default function EcommercePage() {
             kicker="Why LLE Social Media"
             title={
               <>
-                Stores built to
+                Stores Built to
                 <br />
-                <span className="text-aqua">sell.</span>
+                <span className="text-aqua">Sell.</span>
               </>
             }
           />
@@ -283,12 +283,12 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="06"
-            kicker="Our e-commerce services"
+            kicker="Our E-Commerce Services"
             title={
               <>
-                A quick
+                A Quick
                 <br />
-                <span className="text-aqua">snapshot.</span>
+                <span className="text-aqua">Snapshot.</span>
               </>
             }
             note="All services are customized to your industry and business goals."
@@ -302,12 +302,12 @@ export default function EcommercePage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="07"
-            kicker="Frequently asked questions"
+            kicker="Frequently Asked Questions"
             title={
               <>
                 Straight
                 <br />
-                <span className="text-aqua">answers.</span>
+                <span className="text-aqua">Answers.</span>
               </>
             }
           />
@@ -317,10 +317,10 @@ export default function EcommercePage() {
 
       {/* CTA */}
       <ServiceCta
-        title="Ready to launch"
-        highlight="your online store?"
+        title="Ready to Launch"
+        highlight="Your Online Store?"
         body="Whether you're a retailer, manufacturer or service provider, we build online stores that sell. Secure, scalable and optimized for conversions. Get in touch and take the first step toward e-commerce success."
-        buttonLabel="Start your store"
+        buttonLabel="Start Your Store"
         accent="aqua"
       />
     </>

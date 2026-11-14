@@ -172,12 +172,12 @@ function WhoWeAre() {
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           index="01"
-          kicker="Who we are"
+          kicker="Who We Are"
           title={
             <>
-              A passionate team building
+              A Passionate Team Building
               <br />
-              <span className="text-coral">powerful online identities.</span>
+              <span className="text-coral">Powerful Online Identities.</span>
             </>
           }
         />
@@ -205,7 +205,7 @@ function WhoWeAre() {
           <Reveal delay={0.15} className="lg:col-span-5">
             <div className="flex h-full flex-col justify-center gap-3 rounded-lg border border-line bg-ink-2 p-7 md:p-8">
               <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.26em] text-aqua">
-                The people inside LLE
+                The People Inside LLE
               </p>
               {[
                 "Digital Strategists",
@@ -272,12 +272,12 @@ function WhatWeOffer() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           index="03"
-          kicker="What we offer"
+          kicker="What We Offer"
           title={
             <>
-              One studio,
+              One Studio,
               <br />
-              <span className="text-aqua">every discipline covered.</span>
+              <span className="text-aqua">Every Discipline Covered.</span>
             </>
           }
           note="A comprehensive suite of digital services, tailored to meet diverse needs, from scroll-stopping creatives to result-driven strategies."
@@ -288,14 +288,14 @@ function WhatWeOffer() {
             <div className="group flex h-full flex-col rounded-lg border border-line bg-ink-2 p-8 transition-colors duration-500 hover:border-aqua/50 md:p-10">
               <div className="flex items-center justify-between">
                 <p className="font-mono text-xs uppercase tracking-[0.26em] text-aqua">
-                  For healthcare professionals
+                  For Healthcare Professionals
                 </p>
                 <ServiceIcon kind="pulse" className="h-12 w-12 text-aqua transition-transform duration-500 group-hover:scale-110" />
               </div>
               <h3 className="mt-6 font-display text-3xl font-semibold tracking-tight text-paper md:text-4xl">
-                Content that heals
+                Content That Heals
                 <br />
-                <span className="text-aqua">and converts.</span>
+                <span className="text-aqua">and Converts.</span>
               </h3>
               <ul className="mt-8 space-y-4">
                 {HEALTHCARE_OFFERS.map((o, i) => (
@@ -316,14 +316,14 @@ function WhatWeOffer() {
             <div className="group flex h-full flex-col rounded-lg border border-line bg-ink-2 p-8 transition-colors duration-500 hover:border-coral/50 md:p-10">
               <div className="flex items-center justify-between">
                 <p className="font-mono text-xs uppercase tracking-[0.26em] text-coral">
-                  For every business
+                  For Every Business
                 </p>
                 <ServiceIcon kind="web" className="h-12 w-12 text-coral transition-transform duration-500 group-hover:scale-110" />
               </div>
               <h3 className="mt-6 font-display text-3xl font-semibold tracking-tight text-paper md:text-4xl">
-                Build, sell,
+                Build, Sell,
                 <br />
-                <span className="text-coral">scale online.</span>
+                <span className="text-coral">Scale Online.</span>
               </h3>
               <ul className="mt-8 space-y-4">
                 {BUSINESS_OFFERS.map((o, i) => (
@@ -353,7 +353,7 @@ function JourneyNumbers() {
         <Reveal>
           <p className="mb-3 flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.28em] text-ink/70">
             <Asterisk className="h-3.5 w-3.5" />
-            ( 04 · Our journey in numbers )
+            ( 04 · Our Journey in Numbers )
           </p>
         </Reveal>
         <Reveal delay={0.08}>
@@ -392,12 +392,12 @@ function Team() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           index="05"
-          kicker="Meet our team"
+          kicker="Meet Our Team"
           title={
             <>
-              The minds behind
+              The Minds Behind
               <br />
-              <span className="text-coral">your growth.</span>
+              <span className="text-coral">Your Growth.</span>
             </>
           }
           note="Behind every successful project at LLE Social Media is a passionate team dedicated to your growth. Diverse talents, one shared commitment to excellence."
@@ -448,12 +448,12 @@ function OurProcess() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           index="06"
-          kicker="Our process"
+          kicker="Our Process"
           title={
             <>
               Collaborative. Transparent.
               <br />
-              <span className="text-aqua">Every step of the way.</span>
+              <span className="text-aqua">Every Step of the Way.</span>
             </>
           }
           note="From concept to completion we keep you involved at every step, ensuring the final outcome exceeds your expectations."
@@ -487,12 +487,12 @@ function CoreValues() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           index="07"
-          kicker="Our core values"
+          kicker="Our Core Values"
           title={
             <>
-              What we stand for.
+              What We Stand For.
               <br />
-              <span className="text-amber">non-negotiables.</span>
+              <span className="text-amber">Non-Negotiables.</span>
             </>
           }
         />
@@ -530,7 +530,7 @@ function Vision() {
         <Reveal>
           <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-aqua">
             <Asterisk className="h-3.5 w-3.5" />
-            ( 08 · Where we are headed )
+            ( 08 · Where We Are Headed )
           </p>
         </Reveal>
         <Reveal delay={0.1}>
@@ -562,14 +562,14 @@ function WorkTogether() {
         <Reveal>
           <p className="mb-6 flex items-center justify-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-coral">
             <Asterisk className="h-3.5 w-3.5" />
-            ( 09 · Let us work together )
+            ( 09 · Let Us Work Together )
           </p>
         </Reveal>
         <Reveal delay={0.08}>
           <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-paper sm:text-5xl md:text-6xl">
-            We don't just make you visible.
+            We Don't Just Make You Visible.
             <br />
-            <span className="text-coral">We make you unforgettable.</span>
+            <span className="text-coral">We Make You Unforgettable.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.16}>

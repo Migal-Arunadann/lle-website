@@ -2,10 +2,10 @@ import { Asterisk, CountUp, Reveal, SectionHeading } from "../lib/motion";
 import { ABOUT_PATH, goRoute } from "../lib/router";
 
 const MINI_STATS = [
-  { value: 10, suffix: "+", label: "Years of experience" },
-  { value: 60, suffix: "+", label: "Projects delivered" },
-  { value: 1200, suffix: "+", label: "Blogs written" },
-  { value: 100, suffix: "%", label: "Client satisfaction" },
+  { value: 10, suffix: "+", label: "Years of Experience" },
+  { value: 60, suffix: "+", label: "Projects Delivered" },
+  { value: 1200, suffix: "+", label: "Blogs Written" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
 const VALUES = ["Excellence", "Integrity", "Innovation", "Client-Centricity"];
@@ -25,9 +25,9 @@ export default function About() {
           kicker="About Us"
           title={
             <>
-              We make brands
+              We Make Brands
               <br />
-              <span className="text-coral">impossible to ignore.</span>
+              <span className="text-coral">Impossible to Ignore.</span>
             </>
           }
           note="10+ years, five crafts, one mission: a commanding digital presence that drives real results."
@@ -71,7 +71,7 @@ export default function About() {
                   }}
                   className="group flex items-center gap-3 rounded-full bg-coral px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.16em] text-ink transition-all duration-300 hover:gap-5 hover:bg-paper"
                 >
-                  Read our full story
+                  Read Our Full Story
                   <svg
                     viewBox="0 0 16 16"
                     className="h-3.5 w-3.5"
@@ -96,7 +96,7 @@ export default function About() {
               <div className="rounded-lg border border-line bg-ink-2 p-7 md:p-8">
                 <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.28em] text-aqua">
                   <Asterisk className="h-3.5 w-3.5" />
-                  Our journey in numbers
+                  Our Journey in Numbers
                 </p>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-7">
                   {MINI_STATS.map((s) => (
@@ -113,7 +113,7 @@ export default function About() {
 
                 <div className="mt-8 border-t border-line pt-7">
                   <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.26em] text-mist">
-                    Our core values
+                    Our Core Values
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {VALUES.map((v) => (

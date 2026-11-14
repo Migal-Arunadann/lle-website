@@ -15,22 +15,22 @@ import {
 const WHY_REASONS = [
   {
     icon: "layers" as const,
-    title: "Experiences, not just websites",
+    title: "Experiences, Not Just Websites",
     body: "We build digital experiences that engage, convert and grow your business.",
   },
   {
     icon: "globe" as const,
-    title: "Current & capable",
+    title: "Current & Capable",
     body: "We stay on top of design trends, technologies and SEO so your site performs everywhere.",
   },
   {
     icon: "share" as const,
-    title: "Client-centric",
+    title: "Client-Centric",
     body: "We listen to your goals and tailor every solution to your unique needs.",
   },
   {
     icon: "shield" as const,
-    title: "Cross-industry dedication",
+    title: "Cross-Industry Dedication",
     body: "Healthcare, retail or any sector gets the same dedication and expertise on every project.",
   },
 ];
@@ -92,12 +92,12 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="01"
-            kicker="Why website designing matters"
+            kicker="Why Website Designing Matters"
             title={
               <>
-                Your website is your
+                Your Website Is Your
                 <br />
-                <span className="text-coral">digital face.</span>
+                <span className="text-coral">Digital Face.</span>
               </>
             }
             note="A professional website is no longer optional. It is essential."
@@ -132,12 +132,12 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="Discovery & strategy"
+            kicker="Discovery & Strategy"
             title={
               <>
-                We start with
+                We Start with
                 <br />
-                <span className="text-coral">understanding.</span>
+                <span className="text-coral">Understanding.</span>
               </>
             }
           />
@@ -167,12 +167,12 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="03"
-            kicker="Choose your stack"
+            kicker="Choose Your Stack"
             title={
               <>
-                Three ways to
+                Three Ways to
                 <br />
-                <span className="text-coral">build it right.</span>
+                <span className="text-coral">Build It Right.</span>
               </>
             }
           />
@@ -210,12 +210,12 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="04"
-            kicker="From build to launch"
+            kicker="From Build to Launch"
             title={
               <>
-                Crafted, tested,
+                Crafted, Tested,
                 <br />
-                <span className="text-coral">launched with confidence.</span>
+                <span className="text-coral">Launched with Confidence.</span>
               </>
             }
           />
@@ -253,10 +253,10 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="05"
-            kicker="Our work"
+            kicker="Our Work"
             title={
               <>
-                Success <span className="text-coral">stories.</span>
+                Success <span className="text-coral">Stories.</span>
               </>
             }
             note="A glimpse of how we've helped clients transform their digital presence through strategic website design."
@@ -271,15 +271,15 @@ export default function WebsiteDesignPage() {
               description="We designed and developed a modern, conversion-focused landing page for Needil, focused on presenting the brand clearly and engaging healthcare practitioners."
               did={[
                 {
-                  lead: "Modern, professional UI",
+                  lead: "Modern, Professional UI",
                   body: "Tailored to the healthcare industry with clear messaging and strategic call-to-actions.",
                 },
                 {
-                  lead: "Responsive design",
+                  lead: "Responsive Design",
                   body: "Flawless across mobile, tablet and desktop with a fast, smooth browsing experience.",
                 },
                 {
-                  lead: "Built to convert",
+                  lead: "Built to Convert",
                   body: "Designed to build trust and turn visitors into potential customers.",
                 },
               ]}
@@ -323,7 +323,7 @@ export default function WebsiteDesignPage() {
               <>
                 Why LLE for
                 <br />
-                <span className="text-coral">website design?</span>
+                <span className="text-coral">Website Design?</span>
               </>
             }
             note="10+ years of website design and development. We understand what makes a website truly effective."
@@ -338,7 +338,7 @@ export default function WebsiteDesignPage() {
                 onClick={() => goSection("contact")}
                 className="mt-8 inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.18em] text-coral transition-colors hover:text-paper"
               >
-                Start your project
+                Start Your Project
                 <svg viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M2 8h11M9 4l4 4-4 4" />
                 </svg>
@@ -356,12 +356,12 @@ export default function WebsiteDesignPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="07"
-            kicker="At a glance"
+            kicker="At a Glance"
             title={
               <>
-                Our website design
+                Our Website Design
                 <br />
-                <span className="text-coral">services.</span>
+                <span className="text-coral">Services.</span>
               </>
             }
           />
@@ -383,7 +383,7 @@ export default function WebsiteDesignPage() {
               <>
                 Questions,
                 <br />
-                <span className="text-coral">answered.</span>
+                <span className="text-coral">Answered.</span>
               </>
             }
           />
@@ -393,10 +393,10 @@ export default function WebsiteDesignPage() {
 
       <ServiceCta
         accent="coral"
-        title="Ready to build"
-        highlight="your digital identity?"
+        title="Ready to Build"
+        highlight="Your Digital Identity?"
         body="Your website is the cornerstone of your digital presence, and it deserves the best. Whether you need WordPress, custom HTML or a dynamic React application, let's bring your vision to life."
-        buttonLabel="Get a quote"
+        buttonLabel="Get a Quote"
       />
     </>
   );

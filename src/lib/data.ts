@@ -129,76 +129,71 @@ export type Work = {
   blurb: string;
   metrics: { value: string; label: string }[];
   tags: string[];
-  span: "lg" | "sm" | "full";
+  span?: "lg" | "sm" | "full";
   year: string;
+  url: string;
 };
 
 export const WORKS: Work[] = [
   {
-    client: "Koskii",
-    sector: "Fashion D2C",
-    category: "E-Commerce Website",
-    image: IMG.ecom,
-    blurb:
-      "A headless storefront for a streetwear label drowning in cart abandonment. Rebuilt the journey around drops, size confidence and one-tap checkout.",
-    metrics: [
-      { value: "+212%", label: "Avg. order value" },
-      { value: "1.4s", label: "Load time" },
-    ],
-    tags: ["Headless", "CRO", "Brand design"],
-    span: "lg",
-    year: "2025",
-  },
-  {
-    client: "MediLeaf Clinics",
-    sector: "Healthcare",
-    category: "Medical Content",
-    image: IMG.medical,
-    blurb:
-      "A 120-article patient-education engine plus doctor-led social content for a 6-location clinic chain, written with physicians and optimised for local search.",
-    metrics: [{ value: "3.4×", label: "Organic traffic" }],
-    tags: ["Healthcare SEO", "Content system"],
-    span: "sm",
-    year: "2025",
-  },
-  {
-    client: "PulseFit",
-    sector: "Fitness Tech",
-    category: "App Development",
-    image: IMG.app,
-    blurb:
-      "A habit-first fitness companion with adaptive plans and streak mechanics. Took it from napkin sketch to both app stores in nine weeks.",
-    metrics: [{ value: "80k", label: "Downloads, yr 1" }],
-    tags: ["React Native", "Product design"],
-    span: "sm",
-    year: "2024",
-  },
-  {
-    client: "Verdana Skin",
-    sector: "Skincare DTC",
-    category: "Shopify Website",
-    image: IMG.shopify,
-    blurb:
-      "Replatformed from WooCommerce to Shopify with a custom theme, quiz funnel and subscription bundles that turned one-time buyers into routines.",
-    metrics: [{ value: "+190%", label: "Revenue in 6 mo" }],
-    tags: ["Shopify Plus", "Subscriptions"],
-    span: "lg",
-    year: "2024",
-  },
-  {
-    client: "Atelier North",
-    sector: "Architecture",
+    client: "Needil Website",
+    sector: "Acupuncture & Clinic Tech",
     category: "Website Designing",
-    image: IMG.web,
+    image: "./photos/portfolio/needil-web-mockup.png",
     blurb:
-      "A monochrome portfolio site with oversized type and buttery case studies, designed to make a boutique studio feel twice its size.",
+      "A conversion-focused web presence engineered for session-based clinical practices. Built with responsive layouts, clear brand positioning, treatment walkthroughs and seamless practitioner demo bookings.",
     metrics: [
-      { value: "48%", label: "Visitor → lead rate" },
-      { value: "99", label: "PageSpeed score" },
+      { value: "100%", label: "Responsive UX" },
+      { value: "3.2×", label: "Demo requests" },
     ],
-    tags: ["Web design", "Motion", "CMS"],
-    span: "full",
-    year: "2023",
+    tags: ["Healthcare Web", "Conversion UI", "Responsive"],
+    year: "2025",
+    url: "https://needil.com",
+  },
+  {
+    client: "Expert Dental Care",
+    sector: "Dental Healthcare",
+    category: "Website Designing",
+    image: "./photos/portfolio/edc-web-mockup.png",
+    blurb:
+      "A modern, reassuring clinic website showcasing laser dentistry and smile makeovers across two Chennai branches with instant WhatsApp and appointment booking.",
+    metrics: [
+      { value: "+85%", label: "Appointment bookings" },
+      { value: "2.8×", label: "Patient engagement" },
+    ],
+    tags: ["WordPress", "Clinic SEO", "Local UX"],
+    year: "2024",
+    url: "https://expertdental.in",
+  },
+  {
+    client: "Springfield Wellness Centre",
+    sector: "Holistic Healthcare",
+    category: "Medical Content",
+    image: "./photos/portfolio/sfw-content-mockup.png",
+    blurb:
+      "50+ compliance-verified medical articles, bariatric education guides, and doctor-led video scripts breaking down complex surgeries into clear patient knowledge.",
+    metrics: [
+      { value: "50+", label: "Medical blogs" },
+      { value: "3.4×", label: "Organic inquiries" },
+    ],
+    tags: ["Healthcare SEO", "Video Scripts", "Compliance Copy"],
+    year: "2024",
+    url: "https://springfieldwellnesscentre.com",
+  },
+  {
+    client: "Needil Application",
+    sector: "Clinical Practice Management",
+    category: "App Development",
+    image: "./photos/portfolio/needil-app-mockup.png",
+    blurb:
+      "A specialized cross-platform clinical app for acupuncturists and session-based therapy doctors. Streamlines consultations, active treatment tracking, digital case histories, and appointment queues in active hospital and clinic production.",
+    metrics: [
+      { value: "10+", label: "Doctors in production" },
+      { value: "100%", label: "Paperless workflow" },
+    ],
+    tags: ["Android Native", "Flutter", "Patient Management"],
+    year: "2025",
+    url: "https://app.needil.com",
   },
 ];
 

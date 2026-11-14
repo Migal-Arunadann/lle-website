@@ -199,87 +199,94 @@ function ServicesAccordion() {
 /* Work card                                                           */
 /* ------------------------------------------------------------------ */
 function WorkCard({ work, index }: { work: Work; index: number }) {
-  const spanClass =
-    work.span === "full"
-      ? "md:col-span-12"
-      : work.span === "lg"
-        ? "md:col-span-7"
-        : "md:col-span-5";
-
   return (
     <Reveal
       delay={(index % 2) * 0.1}
-      className={`group ${spanClass}`}
+      className="group h-full"
     >
-      <article className="flex h-full flex-col border border-ink/15 bg-paper transition-shadow duration-500 hover:shadow-[10px_10px_0_0_rgba(15,16,19,0.9)]">
-        <div className="relative overflow-hidden">
-          <img
-            src={work.image}
-            alt={`${work.client} — ${work.category} case study`}
-            loading="lazy"
-            className={`w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06] ${
-              work.span === "sm" ? "aspect-[4/3]" : "aspect-[16/10]"
-            }`}
-          />
-          <div className="absolute left-4 top-4 flex gap-2">
-            <span className="rounded-full bg-ink px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-paper">
-              {work.category}
+      <a
+        href={work.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full cursor-pointer focus:outline-none"
+        aria-label={`Visit ${work.client} — ${work.category}`}
+      >
+        <article className="flex h-full flex-col border border-ink/15 bg-paper transition-all duration-500 hover:shadow-[10px_10px_0_0_rgba(15,16,19,0.9)] hover:-translate-y-1">
+          <div className="relative overflow-hidden bg-ink">
+            <img
+              src={work.image}
+              alt={`${work.client} — ${work.category} case study`}
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+            />
+            <div className="absolute left-4 top-4 flex gap-2">
+              <span className="rounded-full bg-ink/90 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-paper backdrop-blur-sm border border-paper/10">
+                {work.category}
+              </span>
+            </div>
+            <span className="absolute right-4 top-4 rounded-full bg-paper/90 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink backdrop-blur-sm border border-ink/10">
+              {work.year}
             </span>
-          </div>
-          <span className="absolute right-4 top-4 rounded-full bg-paper px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink">
-            {work.year}
-          </span>
-          <div className="absolute bottom-4 right-4 grid h-11 w-11 translate-y-3 place-items-center rounded-full bg-coral text-ink opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-            <svg
-              viewBox="0 0 16 16"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <path d="M3 13L13 3M6 3h7v7" />
-            </svg>
-          </div>
-        </div>
-
-        <div className="flex flex-1 flex-col p-6 md:p-8">
-          <div className="flex items-baseline justify-between gap-4">
-            <h3 className="font-display text-2xl font-semibold tracking-tight text-ink md:text-3xl">
-              {work.client}
-            </h3>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50">
-              {work.sector}
-            </p>
-          </div>
-          <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70">
-            {work.blurb}
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3 border-t border-ink/15 pt-5">
-            {work.metrics.map((m) => (
-              <div key={m.label}>
-                <p className="font-display text-2xl font-semibold text-coral">
-                  {m.value}
-                </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink/50">
-                  {m.label}
-                </p>
-              </div>
-            ))}
-            <div className="ml-auto flex flex-wrap items-center gap-1.5">
-              {work.tags.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-ink/20 px-3 py-1 text-[11px] text-ink/60"
-                >
-                  {t}
-                </span>
-              ))}
+            <div className="absolute bottom-4 right-4 grid h-11 w-11 translate-y-3 place-items-center rounded-full bg-coral text-ink opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 shadow-md">
+              <svg
+                viewBox="0 0 16 16"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M3 13L13 3M6 3h7v7" />
+              </svg>
             </div>
           </div>
-        </div>
-      </article>
+
+          <div className="flex flex-1 flex-col p-6 md:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3">
+              <h3 className="font-display text-2xl font-semibold tracking-tight text-ink md:text-[26px] flex items-center gap-1.5">
+                <span>{work.client}</span>
+                <span className="text-ink/40 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-coral text-xl font-normal">
+                  ↗
+                </span>
+              </h3>
+              <p className="shrink-0 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50">
+                {work.sector}
+              </p>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-ink/70">
+              {work.blurb}
+            </p>
+
+            <div className="mt-auto pt-6">
+              <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-ink/15 pt-5">
+                <div className="flex flex-wrap gap-x-8 gap-y-3">
+                  {work.metrics.map((m) => (
+                    <div key={m.label}>
+                      <p className="font-display text-2xl font-semibold text-coral">
+                        {m.value}
+                      </p>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink/50">
+                        {m.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {work.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-ink/20 px-3 py-1 text-[11px] text-ink/60"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </a>
     </Reveal>
   );
 }
@@ -296,12 +303,12 @@ export function ServicesSection() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="What we do"
+            kicker="What We Do"
             title={
               <>
-                Services built to
+                Services Built to
                 <br />
-                <span className="text-coral">deliver results.</span>
+                <span className="text-coral">Deliver Results.</span>
               </>
             }
             note="Multiple disciplines, one obsession: digital presence that pays. Open a row to see what we deliver to our clients."
@@ -324,7 +331,7 @@ export function WorkSection() {
         <SectionHeading
           dark
           index="04"
-          kicker="Selected work"
+          kicker="Selected Work"
           title={
             <>
               Proof Over Promises.
@@ -336,9 +343,9 @@ export function WorkSection() {
           }
           note="A slice of what we have built over years. Every number below was measured on a real dashboard, not estimated in a deck."
         />
-        <div className="grid gap-8 md:grid-cols-12">
+        <div className="grid gap-8 md:grid-cols-2">
           {WORKS.map((w, i) => (
-            <WorkCard key={w.client} work={w} index={i} />
+            <WorkCard key={`${w.client}-${w.category}-${i}`} work={w} index={i} />
           ))}
         </div>
         <Reveal className="mt-14 text-center">
@@ -349,7 +356,7 @@ export function WorkSection() {
             textClass="text-ink"
             hoverTextClass="text-paper"
           >
-            Your project could be next
+            Your Project Could Be Next
           </InteractiveHoverButton>
         </Reveal>
       </div>

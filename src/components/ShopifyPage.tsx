@@ -16,7 +16,7 @@ const PILLAR_ROWS = [
   {
     icon: "pen" as const,
     title: "Theme Customization: Make Your Brand Stand Out",
-    tag: "Beyond the template",
+    tag: "Beyond the Template",
     body: "We customize layouts, typography, color and imagery into a cohesive, memorable experience, optimized for usability, mobile responsiveness and speed, with custom sections tailored to your products and customers.",
   },
   {
@@ -97,22 +97,22 @@ const FAQS = [
 const WHY = [
   {
     icon: "rocket" as const,
-    title: "Scalable, revenue-generating stores",
+    title: "Scalable, Revenue-Generating Stores",
     body: "We don't just build stores. We build platforms that drive sales and grow your business.",
   },
   {
     icon: "globe" as const,
-    title: "Current & capable",
+    title: "Current & Capable",
     body: "On top of the latest Shopify features, app ecosystems and optimization strategies.",
   },
   {
     icon: "share" as const,
-    title: "Client-centric",
+    title: "Client-Centric",
     body: "First product, messy-store redo or full replatform, everything is tailored to your goals.",
   },
   {
     icon: "shield" as const,
-    title: "We make Shopify work for you",
+    title: "We Make Shopify Work for You",
     body: "10+ years of experience behind every store we ship.",
   },
 ];
@@ -131,7 +131,7 @@ export default function ShopifyPage() {
           { text: "Built for", cls: "text-paper" },
           { text: "Scale", cls: "text-amber" },
         ]}
-        tagline="Your Shopify store should grow with your business, and scale effortlessly."
+        tagline="Your Shopify Store Should Grow with Your Business, and Scale Effortlessly."
         meta="Themes · Apps · Migrations · Headless"
         accent="amber"
       />
@@ -141,12 +141,12 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="01"
-            kicker="Why Shopify matters"
+            kicker="Why Shopify Matters"
             title={
               <>
-                The platform trusted
+                The Platform Trusted
                 <br />
-                by <span className="text-amber">millions.</span>
+                by <span className="text-amber">Millions.</span>
               </>
             }
             note="Powerful, reliable, and ready to scale with you."
@@ -180,12 +180,12 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="What we do with Shopify"
+            kicker="What We Do with Shopify"
             title={
               <>
-                Every lever,
+                Every Lever,
                 <br />
-                <span className="text-amber">pulled for you.</span>
+                <span className="text-amber">Pulled for You.</span>
               </>
             }
           />
@@ -210,12 +210,12 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="03"
-            kicker="From theme to launch"
+            kicker="From Theme to Launch"
             title={
               <>
-                The build,
+                The Build,
                 <br />
-                <span className="text-amber">end to end.</span>
+                <span className="text-amber">End to End.</span>
               </>
             }
           />
@@ -228,28 +228,28 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="04"
-            kicker="Our work"
+            kicker="Our Work"
             title={
               <>
-                Success stories,
+                Success Stories,
                 <br />
-                <span className="text-amber">on the way.</span>
+                <span className="text-amber">on the Way.</span>
               </>
             }
             note="Shopify case studies and screenshots are being added soon. Check back shortly."
           />
           <CaseStudy
             num="01"
-            client="Your store could be next"
+            client="Your Store Could Be Next"
             sector="Shopify · Coming soon"
             description="We're preparing a showcase of Shopify stores we've customized, migrated and launched, with screenshots, revenue results and the strategy behind each build. Until then, this space is reserved for the numbers that matter."
             did={[
               {
-                lead: "Live store walkthroughs",
+                lead: "Live Store Walkthroughs",
                 body: "Screenshots and flows from real client stores, once published.",
               },
               {
-                lead: "Revenue results",
+                lead: "Revenue Results",
                 body: "The measurable impact of every store we ship.",
               },
             ]}
@@ -268,9 +268,9 @@ export default function ShopifyPage() {
             kicker="Why LLE Social Media"
             title={
               <>
-                Stores built to
+                Stores Built to
                 <br />
-                <span className="text-amber">scale.</span>
+                <span className="text-amber">Scale.</span>
               </>
             }
           />
@@ -283,12 +283,12 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="06"
-            kicker="Our Shopify services"
+            kicker="Our Shopify Services"
             title={
               <>
-                A quick
+                A Quick
                 <br />
-                <span className="text-amber">snapshot.</span>
+                <span className="text-amber">Snapshot.</span>
               </>
             }
             note="All services are customized to your industry and business goals."
@@ -302,12 +302,12 @@ export default function ShopifyPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="07"
-            kicker="Frequently asked questions"
+            kicker="Frequently Asked Questions"
             title={
               <>
                 Straight
                 <br />
-                <span className="text-amber">answers.</span>
+                <span className="text-amber">Answers.</span>
               </>
             }
           />
@@ -317,10 +317,10 @@ export default function ShopifyPage() {
 
       {/* CTA */}
       <ServiceCta
-        title="Ready to build"
-        highlight="your Shopify store?"
+        title="Ready to Build"
+        highlight="Your Shopify Store?"
         body="First product, messy-store redo or full replatform, we have the expertise to deliver. Secure, scalable and optimized for conversions. Get in touch and take the first step toward e-commerce success."
-        buttonLabel="Start your store"
+        buttonLabel="Start Your Store"
         accent="amber"
       />
     </>

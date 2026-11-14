@@ -13,12 +13,12 @@ export function Process() {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading
             index="03"
-            kicker="How we work"
+            kicker="How We Work"
             title={
               <>
-                A process with
+                A Process with
                 <br />
-                zero <span className="text-aqua">guesswork.</span>
+                Zero <span className="text-aqua">Guesswork.</span>
               </>
             }
           />
@@ -34,7 +34,7 @@ export function Process() {
               href="#contact"
               className="group mt-8 inline-flex items-center gap-3 rounded-full border border-line px-7 py-4 font-mono text-xs font-bold uppercase tracking-[0.16em] text-paper transition-all duration-300 hover:border-aqua hover:bg-aqua hover:text-ink"
             >
-              Book a discovery call
+              Book a Discovery Call
               <svg
                 viewBox="0 0 16 16"
                 className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
@@ -135,7 +135,7 @@ export function Faq() {
               <>
                 Straight
                 <br />
-                <span className="text-amber">answers.</span>
+                <span className="text-amber">Answers.</span>
               </>
             }
           />

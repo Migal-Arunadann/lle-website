@@ -51,9 +51,9 @@ export default function Testimonials() {
           kicker="Testimonials"
           title={
             <>
-              Heard around
+              Heard Around
               <br />
-              the <span className="text-coral">internet.</span>
+              the <span className="text-coral">Internet.</span>
             </>
           }
           note="Founders, doctors and CMOs, in their own words, after the dashboards moved."

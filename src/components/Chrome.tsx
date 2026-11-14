@@ -658,7 +658,7 @@ export function Footer() {
             key={i}
             className="flex items-center gap-6 pr-6 font-display text-3xl font-semibold uppercase tracking-tight"
           >
-            <span className="text-stroke-thin">Let's build something loud</span>
+            <span className="text-stroke-thin">Let's Build Something Loud</span>
             <Asterisk className="h-6 w-6 text-coral" />
           </span>
         ))}
@@ -688,7 +688,7 @@ export function Footer() {
           <div className="mt-6 space-y-1 font-mono text-xs text-paper/70">
             <p>{CONTACT_EMAIL}</p>
             <p>{CONTACT_PHONE}</p>
-            <p className="text-mist">Chennai, Tamil Nadu · serving worldwide</p>
+            <p className="text-mist">Chennai, Tamil Nadu · Serving Worldwide</p>
           </div>
         </div>
 
@@ -740,7 +740,7 @@ export function Footer() {
 
         <div className="lg:col-span-3">
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.26em] text-mist">
-            Growth notes
+            Growth Notes
           </p>
           <p className="mb-4 text-sm leading-relaxed text-mist">
             Monthly insights. Tactics, teardowns and absolutely no fluff.

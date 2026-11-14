@@ -16,22 +16,22 @@ import {
 const WHY_REASONS = [
   {
     icon: "pen" as const,
-    title: "Research, verify, tailor",
+    title: "Research, Verify, Tailor",
     body: "We don't just write. We research and tailor every piece to your specialty and audience.",
   },
   {
     icon: "globe" as const,
-    title: "Always current",
+    title: "Always Current",
     body: "We stay on top of medical trends, SEO practices and social algorithms to keep content effective.",
   },
   {
     icon: "shield" as const,
-    title: "Ethical & compliant",
+    title: "Ethical & Compliant",
     body: "We respect patient privacy and ensure all content complies with healthcare regulations.",
   },
   {
     icon: "share" as const,
-    title: "Genuine passion",
+    title: "Genuine Passion",
     body: "We genuinely care about helping doctors, surgeons and hospitals connect with patients.",
   },
 ];
@@ -116,12 +116,12 @@ export default function MedicalContentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="01"
-            kicker="Why medical content matters"
+            kicker="Why Medical Content Matters"
             title={
               <>
-                Content isn't just marketing.
+                Content Isn't Just Marketing.
                 <br />
-                It's a <span className="text-aqua">responsibility.</span>
+                It's a <span className="text-aqua">Responsibility.</span>
               </>
             }
             note="When it comes to health, trust is everything."
@@ -157,12 +157,12 @@ export default function MedicalContentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="What we create"
+            kicker="What We Create"
             title={
               <>
-                Three ways we make
+                Three Ways We Make
                 <br />
-                your expertise <span className="text-aqua">heard.</span>
+                Your Expertise <span className="text-aqua">Heard.</span>
               </>
             }
           />
@@ -200,10 +200,10 @@ export default function MedicalContentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="03"
-            kicker="Our work"
+            kicker="Our Work"
             title={
               <>
-                Success <span className="text-aqua">stories.</span>
+                Success <span className="text-aqua">Stories.</span>
               </>
             }
             note="A glimpse of how we've helped healthcare clients transform their digital presence."
@@ -270,7 +270,7 @@ export default function MedicalContentPage() {
               <>
                 Why LLE for
                 <br />
-                <span className="text-aqua">medical content?</span>
+                <span className="text-aqua">Medical Content?</span>
               </>
             }
             note="10+ years of healthcare content creation. We understand what sets medical professionals apart."
@@ -294,12 +294,12 @@ export default function MedicalContentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="05"
-            kicker="How we work"
+            kicker="How We Work"
             title={
               <>
-                Content that works,
+                Content That Works,
                 <br />
-                <span className="text-aqua">step by step.</span>
+                <span className="text-aqua">Step by Step.</span>
               </>
             }
             note="Simple, transparent and results-driven. From start to finish we keep you involved and informed."
@@ -313,12 +313,12 @@ export default function MedicalContentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="06"
-            kicker="At a glance"
+            kicker="At a Glance"
             title={
               <>
-                Our medical content
+                Our Medical Content
                 <br />
-                <span className="text-aqua">services.</span>
+                <span className="text-aqua">Services.</span>
               </>
             }
           />
@@ -333,7 +333,7 @@ export default function MedicalContentPage() {
             <Reveal delay={0.12} className="lg:col-span-5">
               <div className="rounded-lg border border-line bg-ink p-7 md:p-8">
                 <p className="font-display text-xl font-semibold tracking-tight text-paper">
-                  Not sure where to start?
+                  Not Sure Where to Start?
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-mist">
                   Tell us about your practice and goals. We'll recommend the
@@ -343,7 +343,7 @@ export default function MedicalContentPage() {
                   onClick={() => goSection("contact")}
                   className="mt-6 inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.18em] text-aqua transition-colors hover:text-paper"
                 >
-                  Talk to us
+                  Talk to Us
                   <svg viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <path d="M2 8h11M9 4l4 4-4 4" />
                   </svg>
@@ -364,7 +364,7 @@ export default function MedicalContentPage() {
               <>
                 Questions,
                 <br />
-                <span className="text-aqua">answered.</span>
+                <span className="text-aqua">Answered.</span>
               </>
             }
           />
@@ -374,10 +374,10 @@ export default function MedicalContentPage() {
 
       <ServiceCta
         accent="aqua"
-        title="Ready to elevate"
-        highlight="your medical brand?"
+        title="Ready to Elevate"
+        highlight="Your Medical Brand?"
         body="Your content is the voice of your practice, so make it count. Whether you need blogs, social posts or professional videos, let's create medical content that truly makes a difference."
-        buttonLabel="Get in touch"
+        buttonLabel="Get in Touch"
       />
     </>
   );

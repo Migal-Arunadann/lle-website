@@ -77,9 +77,9 @@ export default function Contact() {
           kicker="Contact"
           title={
             <>
-              Got a project?
+              Got a Project?
               <br />
-              Let's make it <span className="text-coral">real.</span>
+              Let's Make It <span className="text-coral">Real.</span>
               <Asterisk className="ml-3 inline h-8 w-8 text-coral md:h-12 md:w-12" />
             </>
           }
@@ -132,7 +132,7 @@ export default function Contact() {
             <Reveal delay={0.18}>
               <div className="mt-10">
                 <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.26em] text-mist">
-                  Follow the noise
+                  Follow the Noise
                 </p>
                 <div className="flex gap-3">
                   {SOCIALS.map((s) => (
@@ -179,7 +179,7 @@ export default function Contact() {
                         </svg>
                       </span>
                       <h3 className="mt-6 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-                        Brief received!
+                        Brief Received!
                       </h3>
                       <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink/70">
                         Thanks, {form.name.split(" ")[0] || "friend"}. Your
@@ -191,7 +191,7 @@ export default function Contact() {
                         onClick={reset}
                         className="mt-8 rounded-full border border-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-[0.16em] transition-all duration-300 hover:bg-ink hover:text-paper"
                       >
-                        Send another brief
+                        Send Another Brief
                       </button>
                     </motion.div>
                   ) : (
@@ -205,7 +205,7 @@ export default function Contact() {
                     >
                       <p className="mb-8 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.26em] text-ink/60">
                         <Asterisk className="h-3.5 w-3.5 text-coral" />
-                        Project brief · 60 seconds
+                        Project Brief · 60 Seconds
                       </p>
 
                       <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -214,7 +214,7 @@ export default function Contact() {
                             htmlFor="c-name"
                             className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/60"
                           >
-                            Your name *
+                            Your Name *
                           </label>
                           <input
                             id="c-name"
@@ -270,7 +270,7 @@ export default function Contact() {
                             htmlFor="c-service"
                             className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/60"
                           >
-                            What do you need?
+                            What Do You Need?
                           </label>
                           <select
                             id="c-service"
@@ -290,7 +290,7 @@ export default function Contact() {
 
                       <div className="mt-8">
                         <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink/60">
-                          Rough budget
+                          Rough Budget
                         </p>
                         <div className="flex flex-wrap gap-2.5">
                           {BUDGETS.map((b) => (
@@ -315,7 +315,7 @@ export default function Contact() {
                           htmlFor="c-msg"
                           className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/60"
                         >
-                          About the project *
+                          About the Project *
                         </label>
                         <textarea
                           id="c-msg"
@@ -342,7 +342,7 @@ export default function Contact() {
                           textClass="text-ink"
                           hoverTextClass="text-paper"
                         >
-                          Send the brief
+                          Send the Brief
                         </InteractiveHoverButton>
                         <p className="font-mono text-[11px] text-ink/50">
                           No spam, no retainers-push. Just a plan.

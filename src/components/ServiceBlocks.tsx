@@ -289,7 +289,7 @@ export function ServiceHero({
               textClass={ACCENT_TEXT[accent]}
               hoverTextClass="text-ink"
             >
-              Start a project
+              Start a Project
             </InteractiveHoverButton>
             <InteractiveHoverButton
               onClick={() => goSection("services")}
@@ -298,7 +298,7 @@ export function ServiceHero({
               textClass="text-paper"
               hoverTextClass="text-ink"
             >
-              All services
+              All Services
             </InteractiveHoverButton>
           </div>
         </Reveal>
@@ -815,7 +815,7 @@ export function CaseStudy({
           </p>
 
           <p className="mb-3 mt-6 font-mono text-[11px] uppercase tracking-[0.24em] text-paper/70">
-            What we did
+            What We Did
           </p>
           <ul className="space-y-3">
             {did.map((d) => (
@@ -841,7 +841,7 @@ export function CaseStudy({
             <p
               className={`font-mono text-[10px] uppercase tracking-[0.24em] ${ACCENT_TEXT[accent]}`}
             >
-              The result
+              The Result
             </p>
             <p className="mt-2 text-sm leading-relaxed text-paper/85">
               {result}
@@ -1069,7 +1069,7 @@ export function ServiceCta({
             className={`mb-5 flex items-center justify-center gap-3 font-mono text-xs uppercase tracking-[0.3em] ${ACCENT_TEXT[accent]}`}
           >
             <Asterisk className="h-4 w-4" />
-            Let's work together
+            Let's Work Together
           </p>
         </Reveal>
         <Reveal delay={0.08}>

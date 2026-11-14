@@ -1,147 +1,242 @@
+import { useEffect, useRef, useState } from "react";
 import InteractiveHoverButton from "./InteractiveHoverButton";
 import {
   Asterisk,
   CountUp,
-  Reveal,
-  RotatingBadge,
   ScrambleWord,
 } from "../lib/motion";
-import { IMG, STATS } from "../lib/data";
-import { goRoute } from "../lib/router";
+import { STATS } from "../lib/data";
+import { goRoute, goSection } from "../lib/router";
 
 const WORDS = ["SELL.", "SCALE.", "CONVERT.", "LEAD."];
 
+const PILLARS = [
+  "Websites",
+  "E-Commerce",
+  "Shopify",
+  "Medical Content",
+  "Android & Apps",
+];
+
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  // Auto-play the video smoothly on mount
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        setIsPlaying(false);
+      });
+    }
+  }, []);
+
+  const togglePlayback = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
   return (
-    <section id="top" className="relative overflow-hidden bg-ink">
-      <div className="grid-lines pointer-events-none absolute inset-0" />
-      {/* ambient glows */}
-      <div className="pointer-events-none absolute -left-40 top-24 h-[480px] w-[480px] rounded-full bg-coral/[0.07] blur-[120px]" />
-      <div className="pointer-events-none absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-aqua/[0.06] blur-[110px]" />
+    <section id="top" className="relative min-h-[96vh] overflow-hidden bg-ink">
+      {/* ------------------------------------------------------------ */}
+      {/* 1. Full-size background video with cinematic grading         */}
+      {/* ------------------------------------------------------------ */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="./hero-video-poster.jpg"
+          style={{
+            objectPosition: "100% center",
+            transform: "scale(1.08) translate(3%, 0)",
+            filter: "brightness(0.72) contrast(1.15)",
+          }}
+          className="h-full w-full object-cover transition-all duration-700"
+        >
+          <source src="./hero-pexels-office.mp4" type="video/mp4" />
+          <source src="./hero-programming-dark.mp4" type="video/mp4" />
+        </video>
 
-      <div className="relative mx-auto max-w-7xl px-5 pt-20 md:px-8 md:pt-24">
-        <div className="grid items-start gap-14 lg:grid-cols-12">
-          {/* headline */}
-          <div className="lg:col-span-7">
-            <h1 className="font-display font-bold uppercase leading-[0.92] tracking-tight">
-              <Reveal delay={0.05}>
-                <span className="block translate-y-[0.22em] text-[15vw] text-paper sm:text-7xl lg:text-[6.4rem]">
-                  We make
-                </span>
-              </Reveal>
-              <Reveal delay={0.14}>
-                <span className="text-stroke block text-[15vw] sm:text-7xl lg:text-[6.4rem]">
-                  brands
-                </span>
-              </Reveal>
-              <Reveal delay={0.23}>
-                <span className="block text-[15vw] text-coral sm:text-7xl lg:text-[6.4rem]">
-                  <ScrambleWord words={WORDS} />
-                </span>
-              </Reveal>
-            </h1>
+        {/* Cinematic gradient overlays: deep charcoal on left for razor-sharp typography contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 via-45% to-ink/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60" />
+        <div className="absolute inset-0 bg-ink/20" />
 
-            <Reveal delay={0.32}>
-              <p className="mt-8 max-w-md text-base leading-relaxed text-mist md:text-lg">
-                LLE Social Media designs and engineers Websites, E-commerce
-                and Shopify Stores, Medical Content and Mobile Apps, built to
-                be measured, and help grow businesses.
-              </p>
-            </Reveal>
+        {/* Ambient brand glow points */}
+        <div className="pointer-events-none absolute -left-20 top-1/4 h-[440px] w-[440px] rounded-full bg-coral/[0.07] blur-[130px]" />
+        <div className="pointer-events-none absolute right-12 bottom-1/3 h-[420px] w-[420px] rounded-full bg-aqua/[0.06] blur-[120px]" />
 
-            <Reveal delay={0.4}>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <InteractiveHoverButton
-                  href="about-us"
-                  onClick={() => goRoute("about-us")}
-                  className="border-coral px-7 py-4"
-                  dotClass="bg-coral"
-                  textClass="text-coral"
-                  hoverTextClass="text-ink"
-                >
-                  More on LLE Social Media
-                </InteractiveHoverButton>
-                <InteractiveHoverButton
-                  href="#work"
-                  className="border-line px-7 py-4"
-                  dotClass="bg-paper"
-                  textClass="text-paper"
-                  hoverTextClass="text-ink"
-                >
-                  See Our Works
-                </InteractiveHoverButton>
-              </div>
-            </Reveal>
+        {/* Subtle grid lines pattern */}
+        <div className="grid-lines pointer-events-none absolute inset-0 opacity-20" />
+      </div>
+
+      {/* ------------------------------------------------------------ */}
+      {/* 2. Foreground Hero Content                                   */}
+      {/* ------------------------------------------------------------ */}
+      <div className="relative z-10 mx-auto flex min-h-[96vh] max-w-7xl flex-col justify-between px-5 pt-28 pb-8 md:px-8 md:pt-36">
+        <div>
+          {/* Top meta strip */}
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-line/90 bg-ink-2/90 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/90 backdrop-blur-md shadow-lg">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-aqua opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-aqua" />
+              </span>
+              <span>Digital Growth Studio</span>
+              <span className="text-line">/</span>
+              <span className="text-coral">Listen · Learn · Engage</span>
+            </div>
+
+            {/* Video playback controller */}
+            <button
+              type="button"
+              onClick={togglePlayback}
+              aria-label={isPlaying ? "Pause background reel" : "Play background reel"}
+              className="group inline-flex items-center gap-2.5 rounded-full border border-line/80 bg-ink-2/80 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-mist backdrop-blur-md transition-all hover:border-coral/80 hover:text-paper"
+            >
+              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-ink-3 text-coral">
+                {isPlaying ? (
+                  <svg className="h-2 w-2" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4 3h3v10H4zM9 3h3v10H9z" />
+                  </svg>
+                ) : (
+                  <svg className="h-2 w-2 translate-x-0.5" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4 3l9 5-9 5z" />
+                  </svg>
+                )}
+              </span>
+              <span>{isPlaying ? "Reel Active" : "Reel Paused"}</span>
+            </button>
           </div>
 
-          {/* visual */}
-          <div className="relative lg:col-span-5">
-            <Reveal delay={0.25} y={40}>
-              <div className="group relative">
-                <div className="absolute -inset-3 rotate-2 rounded-lg border border-line transition-transform duration-700 group-hover:rotate-0" />
-                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
-                  <img
-                    src={IMG.hero}
-                    alt="LLE Social Media, digital craft showcase"
-                    className="h-full w-full object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-[1.05]"
-                    loading="eager"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
-                </div>
+          {/* Monumental Headline */}
+          <div className="mt-8 max-w-5xl">
+            <h1 className="font-display font-extrabold uppercase tracking-tight">
+              <span className="block text-[12vw] leading-[0.88] text-paper sm:text-7xl md:text-8xl lg:text-[6.8rem] xl:text-[7.6rem]">
+                We make brands
+              </span>
+              <span className="block text-[12vw] leading-[0.92] text-coral sm:text-7xl md:text-8xl lg:text-[6.8rem] xl:text-[7.6rem] drop-shadow-[0_4px_36px_rgba(255,77,46,0.25)]">
+                <ScrambleWord words={WORDS} />
+              </span>
+            </h1>
 
-                {/* floating chips */}
-                <div className="animate-floaty absolute -left-4 top-8 flex items-center gap-2 rounded-full border border-line bg-ink/90 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-aqua backdrop-blur-sm sm:-left-10">
-                  <Asterisk className="h-3 w-3" />
-                  Medical Content Creation
-                </div>
-                <div className="animate-floaty-late absolute -right-3 bottom-24 rounded-full border border-line bg-ink/90 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-coral backdrop-blur-sm sm:-right-8">
-                  Shopify · Woo · Native
-                </div>
-              </div>
-            </Reveal>
+            {/* Subtext description */}
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-mist md:text-lg font-normal">
+              LLE Social Media crafts high-impact{" "}
+              <span className="text-paper font-semibold">Websites</span>,{" "}
+              <span className="text-paper font-semibold">E-Commerce & Shopify Stores</span>,{" "}
+              <span className="text-paper font-semibold">Medical Content</span>, and{" "}
+              <span className="text-paper font-semibold">Mobile Apps</span>. We build digital
+              experiences engineered to turn curiosity into customers and scale businesses.
+            </p>
 
-            <RotatingBadge className="absolute -bottom-10 -left-6 h-28 w-28 sm:h-32 sm:w-32" />
+            {/* Action buttons sitting cleanly in front */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <InteractiveHoverButton
+                href="about-us"
+                onClick={() => goRoute("about-us")}
+                className="border-coral bg-coral/15 px-7 py-4 backdrop-blur-md shadow-xl hover:bg-coral hover:text-ink"
+                dotClass="bg-coral"
+                textClass="text-coral"
+                hoverTextClass="text-ink"
+              >
+                More on LLE Social Media
+              </InteractiveHoverButton>
+
+              <InteractiveHoverButton
+                href="#work"
+                onClick={(e) => {
+                  e.preventDefault();
+                  goSection("work");
+                }}
+                className="border-line/90 bg-ink-2/70 px-7 py-4 backdrop-blur-md hover:border-paper"
+                dotClass="bg-paper"
+                textClass="text-paper"
+                hoverTextClass="text-ink"
+              >
+                See Our Works
+              </InteractiveHoverButton>
+            </div>
+
+            {/* Capability chips */}
+            <div className="mt-7 flex flex-wrap items-center gap-2">
+              {PILLARS.map((p) => (
+                <span
+                  key={p}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-line/70 bg-ink-2/75 px-3.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-paper/80 backdrop-blur-sm shadow-sm"
+                >
+                  <Asterisk className="h-2.5 w-2.5 text-coral" />
+                  {p}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* stat strip */}
-        <Reveal delay={0.15}>
-          <div className="mt-24 grid grid-cols-2 gap-y-8 border-t border-line py-8 sm:grid-cols-4">
-            {STATS.map((s, i) => (
-              <div
-                key={s.label}
-                className={`px-2 sm:px-6 ${
-                  i > 0 ? "sm:border-l sm:border-line" : ""
-                }`}
-              >
-                <p className="font-display text-4xl font-semibold text-paper md:text-5xl">
-                  <CountUp to={s.value} suffix={s.suffix} />
-                </p>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mist">
-                  {s.label}
-                </p>
-              </div>
-            ))}
+        {/* ------------------------------------------------------------ */}
+        {/* 3. Stat Strip HUD                                            */}
+        {/* ------------------------------------------------------------ */}
+        <div className="mt-14">
+          <div className="rounded-2xl border border-line/80 bg-ink-2/80 p-6 backdrop-blur-md shadow-2xl sm:p-7">
+            <div className="grid grid-cols-2 gap-y-6 sm:grid-cols-4">
+              {STATS.map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`px-3 sm:px-6 ${
+                    i > 0 ? "sm:border-l sm:border-line/70" : ""
+                  }`}
+                >
+                  <p className="font-display text-3xl font-bold text-paper md:text-4xl lg:text-5xl">
+                    <CountUp to={s.value} suffix={s.suffix} />
+                  </p>
+                  <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-mist md:text-[11px]">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </Reveal>
 
-        {/* scroll cue */}
-        <div className="flex items-center justify-between pb-10 pt-4">
-          <p className="font-mono text-[11px] uppercase tracking-[0.26em] text-mist">
-            Scroll. The good stuff is below
-          </p>
-          <span className="animate-cue text-coral">
-            <svg
-              viewBox="0 0 16 16"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
+          {/* Bottom scroll cue */}
+          <div className="flex items-center justify-between pt-5">
+            <p className="font-mono text-[11px] uppercase tracking-[0.26em] text-mist/75">
+              Scroll · Discover the Crafts
+            </p>
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                goSection("about");
+              }}
+              aria-label="Scroll to next section"
+              className="group flex items-center gap-2 font-mono text-xs text-coral transition-colors hover:text-paper"
             >
-              <path d="M8 2v11M3 9l5 5 5-5" />
-            </svg>
-          </span>
+              <span className="hidden uppercase tracking-[0.2em] sm:inline text-[10px]">
+                Explore
+              </span>
+              <span className="animate-cue rounded-full border border-coral/40 p-1.5 transition-colors group-hover:border-coral group-hover:bg-coral group-hover:text-ink">
+                <svg
+                  viewBox="0 0 16 16"
+                  className="h-3.5 w-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                >
+                  <path d="M8 2v11M3 9l5 5 5-5" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

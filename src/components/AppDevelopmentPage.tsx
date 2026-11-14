@@ -91,22 +91,22 @@ const FAQS = [
 const WHY = [
   {
     icon: "layers" as const,
-    title: "Experiences that retain",
+    title: "Experiences That Retain",
     body: "We don't just build apps. We build digital experiences that engage, retain and grow your user base.",
   },
   {
     icon: "globe" as const,
-    title: "Current & capable",
+    title: "Current & Capable",
     body: "Latest technologies, design trends and security practices go into apps that perform exceptionally.",
   },
   {
     icon: "share" as const,
-    title: "Client-centric",
+    title: "Client-Centric",
     body: "We listen to your goals and tailor every solution to your unique needs.",
   },
   {
     icon: "shield" as const,
-    title: "Cross-industry dedication",
+    title: "Cross-Industry Dedication",
     body: "Healthcare, retail or any industry gets the same dedication and expertise on every project.",
   },
 ];
@@ -135,12 +135,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="01"
-            kicker="Why mobile app development matters"
+            kicker="Why Mobile App Development Matters"
             title={
               <>
-                A dedicated app is no
+                A Dedicated App Is No
                 <br />
-                longer a <span className="text-coral">luxury.</span>
+                Longer a <span className="text-coral">Luxury.</span>
               </>
             }
             note="In a mobile-first world, it is a necessity."
@@ -175,12 +175,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="02"
-            kicker="The platforms"
+            kicker="The Platforms"
             title={
               <>
-                Native depth,
+                Native Depth,
                 <br />
-                <span className="text-coral">cross-platform reach.</span>
+                <span className="text-coral">Cross-Platform Reach.</span>
               </>
             }
           />
@@ -205,12 +205,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="03"
-            kicker="From idea to Play Store"
+            kicker="From Idea to Play Store"
             title={
               <>
-                The build,
+                The Build,
                 <br />
-                <span className="text-coral">end to end.</span>
+                <span className="text-coral">End to End.</span>
               </>
             }
             note="Secure databases, HIPAA/DPDP/GDPR compliance and custom features, all under one roof."
@@ -224,12 +224,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="04"
-            kicker="Featured app"
+            kicker="Featured App"
             title={
               <>
-                In production.
+                In Production.
                 <br />
-                <span className="text-coral">In real clinics.</span>
+                <span className="text-coral">In Real Clinics.</span>
               </>
             }
             note="This is not a demo. It runs live every day."
@@ -241,15 +241,15 @@ export default function AppDevelopmentPage() {
             description="A dedicated patient management system built for acupuncturists and other session-based treatment practitioners, designed around how clinics actually run their day, from intake to follow-up."
             did={[
               {
-                lead: "Session-based workflow",
+                lead: "Session-Based Workflow",
                 body: "Appointments, treatment sessions and follow-ups modelled for acupuncturists and therapy-led practices.",
               },
               {
-                lead: "Patient records",
+                lead: "Patient Records",
                 body: "Complete histories, treatment notes and progress tracking in one secure place.",
               },
               {
-                lead: "Real-time operation",
+                lead: "Real-Time Operation",
                 body: "Built for live clinical use, so it stays fast, reliable and dependable during a working day.",
               },
             ]}
@@ -269,9 +269,9 @@ export default function AppDevelopmentPage() {
             kicker="Why LLE Social Media"
             title={
               <>
-                Apps built to be
+                Apps Built to Be
                 <br />
-                <span className="text-coral">kept.</span>
+                <span className="text-coral">Kept.</span>
               </>
             }
           />
@@ -284,12 +284,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="06"
-            kicker="Our app development services"
+            kicker="Our App Development Services"
             title={
               <>
-                A quick
+                A Quick
                 <br />
-                <span className="text-coral">snapshot.</span>
+                <span className="text-coral">Snapshot.</span>
               </>
             }
             note="All services are customized to your industry and business goals."
@@ -303,12 +303,12 @@ export default function AppDevelopmentPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             index="07"
-            kicker="Frequently asked questions"
+            kicker="Frequently Asked Questions"
             title={
               <>
                 Straight
                 <br />
-                <span className="text-coral">answers.</span>
+                <span className="text-coral">Answers.</span>
               </>
             }
           />
@@ -318,10 +318,10 @@ export default function AppDevelopmentPage() {
 
       {/* CTA */}
       <ServiceCta
-        title="Ready to build"
-        highlight="your mobile app?"
+        title="Ready to Build"
+        highlight="Your Mobile App?"
         body="Whether you need a native Android app, a cross-platform Flutter app or a React Native solution, we bring your vision to life, secure, scalable and tailored to you. Get in touch and take the first step toward mobile excellence."
-        buttonLabel="Start your app"
+        buttonLabel="Start Your App"
         accent="coral"
       />
     </>
